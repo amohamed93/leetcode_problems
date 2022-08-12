@@ -15,13 +15,9 @@ class Solution:
             if index > len(s) - 1:
                 break
             value = convert_dict[s[index]]
-            print("value", value)
             if index + 1 < len(s) and convert_dict[s[index]] < convert_dict[s[index+1]]:
-                print("enter here",  convert_dict[each_char])
                 value = -1 * value + convert_dict[s[index+1]]
-                index += 1
-                
+                index += 1     
             number += value
-            print("number", number)
             index += 1
         return number
